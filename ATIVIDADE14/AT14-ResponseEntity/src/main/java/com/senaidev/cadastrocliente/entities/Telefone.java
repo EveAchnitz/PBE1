@@ -14,66 +14,65 @@ import jakarta.persistence.Table;
 public class Telefone {
 
 	//ATRIBUTOS
-	//ATRIBUTOS
-		@Id
-		@GeneratedValue(strategy = GenerationType.IDENTITY)
-		private Long id_telefone;
-		
-		@Column(name = "ddd")
-		private String ddd;
-		
-		@Column(name = "numero_telefone")
-		private int numero_telefone;
-		
-		@Column(name = "tipo")
-		private String tipo;
-		
-		@ManyToOne
-		@JoinColumn(name = "CLIENTE_id_cliente")
-		private Cliente cliente;
-		
-		//CONSTRUTORES
-		public Telefone() {
-			
-		}
-		
-		public Telefone(Long id_telefone, String ddd, int numero_telefone, String tipo) {
-			this.id_telefone = id_telefone;
-			this.ddd = ddd;
-			this.numero_telefone = numero_telefone;
-			this.tipo = tipo;
-		}
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id_telefone;
 
-		//GETTERS E SETTERS
-		public Long getId_telefone() {
-			return id_telefone;
-		}
+	@Column(name = "ddd")
+	private String ddd;
 
-		public void setId_telefone(Long id_telefone) {
-			this.id_telefone = id_telefone;
-		}
+	@Column(name = "numero_telefone")
+	private int numero_telefone;
 
-		public String getDdd() {
-			return ddd;
-		}
+	@Column(name = "tipo")
+	private String tipo;
 
-		public void setDdd(String ddd) {
-			this.ddd = ddd;
-		}
+	@ManyToOne
+	@JoinColumn(name = "CLIENTE_id_cliente")
+	private Cliente cliente;
 
-		public int getNumero_telefone() {
-			return numero_telefone;
-		}
+	//CONSTRUTORES
+	public Telefone() {
 
-		public void setNumero_telefone(int numero_telefone) {
-			this.numero_telefone = numero_telefone;
-		}
+	}
 
-		public String getTipo() {
-			return tipo;
-		}
+	public Telefone(Long id_telefone, String ddd, int numero_telefone, String tipo) {
+		this.id_telefone = id_telefone;
+		this.ddd = ddd;
+		this.numero_telefone = numero_telefone;
+		this.tipo = tipo;
+	}
 
-		public void setTipo(String tipo) {
-			this.tipo = tipo;
-		}
+	//GETTERS E SETTERS
+	public Long getId_telefone() {
+		return id_telefone;
+	}
+
+	public void setId_telefone(Long id_telefone) {
+		this.id_telefone = id_telefone;
+	}
+
+	public String getDdd() {
+		return ddd;
+	}
+
+	public void setDdd(String ddd) {
+		this.ddd = ddd;
+	}
+
+	public int getNumero_telefone() {
+		return numero_telefone;
+	}
+
+	public void setNumero_telefone(int numero_telefone) {
+		this.numero_telefone = numero_telefone;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
 }
