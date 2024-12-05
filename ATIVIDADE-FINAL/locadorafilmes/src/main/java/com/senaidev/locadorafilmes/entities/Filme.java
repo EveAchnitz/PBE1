@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -27,6 +29,10 @@ public class Filme {
 	
 	@Column(name = "preco", nullable = false)
 	private double preco;
+	
+	@ManyToOne
+	@JoinColumn(name="CLIENTE_idCliente")
+	private Cliente cliente; 
 	
 	//CONSTRUTORES
 	public Filme() {
